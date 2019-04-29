@@ -12,18 +12,26 @@
   },
   "dependencies": {
     "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "ejs": "^2.5.8",
+    "ejs": "^2.6.1",
     "express": "^4.16.2",
     "fs-extra": "^6.0.1",
+    "git": "^0.1.5",
+    "i": "^0.3.6",
     "jsonwebtoken": "^8.3.0",
+    "lowdb": "^1.0.0",
+    "mogoose": "^3.1.8",
+    "mongoose": "^5.5.3",
     "path": "^0.12.7",
     "pg": "^7.4.3",
+    "pug": "^2.0.3",
     "request": "^2.83.0",
     "sequelize": "^4.43.2",
     "sequelize-cli": "^5.4.0",
     "winston": "^3.0.0",
-    "winston-daily-rotate-file": "^3.2.3"
+    "winston-daily-rotate-file": "^3.2.3",
+    "yarn": "^1.15.2"
   },
   "scripts": {
     "start": "nodemon server/index.js --exec babel-node --presets env,stage-2",

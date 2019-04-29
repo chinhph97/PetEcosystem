@@ -7,9 +7,16 @@ import FS from 'fs-extra';
 import Http from 'http';
 import Path from 'path';
 
-const app = Express();
+const mongoose  = require('mongoose');
+mongoose.set('useCreateIndex', true)
+mongoose.connect("mongodb://localhost:27017/Test", { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
+// Middlewares moved morgan into if for clear tests
+if (!process.env.NODE_ENV === 'test') {
+    app.use(morgan('dev'));
+}
 global.__rootDir = __dirname.replace('/server', '');
-
+const app = Express();
 app
     .use(Cors())
     .use(BodyParser.json())
